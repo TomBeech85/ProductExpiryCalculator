@@ -1,0 +1,39 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Todays date is @DateTime.Now.ToShortDateString()</h1>
+    <style>
+        table, th, td {
+            border: 1px solid;
+            padding: 5px;
+        }
+
+        .center {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+    </style>
+
+    <table class=center>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Life</th>
+            <th>Expiry Date</th>
+        </tr>
+        @foreach (Product currentProduct in Model)
+        {
+            <tr>
+                <td>@currentProduct.ProductName</td>
+                <td>@currentProduct.DaysUntilExpiry</td>
+                <td>@currentProduct.DateOfExpiry.ToShortDateString()</td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<h1></h1>

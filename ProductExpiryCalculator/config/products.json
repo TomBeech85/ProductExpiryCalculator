@@ -1,0 +1,14 @@
+[
+  {
+    "ProductName": "Product A",
+    "DaysUntilExpiry": 45
+  },
+  {
+    "ProductName": "Product B",
+    "DaysUntilExpiry": 90
+  },
+  {
+    "ProductName": "Product C",
+    "DaysUntilExpiry": 120
+  }
+]
